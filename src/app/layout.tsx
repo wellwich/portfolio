@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className='bg-gray-400 lg:m-64 lg:mt-0'>
-        <h1 className='text-8xl font-bold'>wellwich.com</h1>
+        <h1 className='text-6xl lg:text-8xl font-bold'>wellwich.com</h1>
         {children}
       </body>
     </html>
