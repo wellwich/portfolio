@@ -11,11 +11,9 @@ export default function Card({
     imageSrc: string;
 }) {
     const [isOpen, setIsOpen] = useState(false);
-
     const toggleModal = () => {
         setIsOpen(!isOpen);
     }
-
     const closeModal = () => {
         setIsOpen(false);
     }
