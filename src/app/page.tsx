@@ -41,7 +41,7 @@ export default function Home() {
           <button onClick={() => copyTextToClipboard(m + "." + a + "@" + i + "." + l)}>
             <p className='text-2xl'>📧</p>
             <p className='text-sm'>
-              {copySuccess ? 'Copied!' : "Click to copy email address."}
+              {copySuccess ? <> Copied<br />email address!</> : "Click to copy email address."}
             </p>
           </button>
         </div>
