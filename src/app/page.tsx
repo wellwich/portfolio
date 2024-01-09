@@ -5,6 +5,7 @@ import Card from './components/Card/Card'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
+import { faMailForward } from '@fortawesome/free-solid-svg-icons/faMailForward';
 import React, { useState } from 'react';
 export default function Home() {
   const [copySuccess, setCopySuccess] = useState(false);
@@ -29,7 +30,7 @@ export default function Home() {
           <Card key={id} id={id} title={title} imageSrc={imageSrc}></Card>
         ))}
       </div>
-      <h2 className='text-4xl font-bold'>LINK</h2>
+      <h2 className='text-4xl font-bold'>LINKS</h2>
       <div className='rounded bg-gray-100 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 auto-rows-max gap-6 lg:p-16 p-4'>
         {links.map(({ id, title, url, icon }) => (
           <div key={id}><a href={url} target='_blank' className='block text-center p-4 hover:bg-gray-200 rounded'><FontAwesomeIcon icon={icon} className='text-[64px]' /></a></div>
@@ -41,7 +42,7 @@ export default function Home() {
           <button onClick={() => copyTextToClipboard(m + "." + a + "@" + i + "." + l)}>
             <p className='text-2xl'>📧</p>
             <p className='text-sm'>
-              {copySuccess ? <> Copied<br />email address!</> : <>Click to copy<br />email address.</>}
+              {copySuccess ? <> <p className=' text-green-600'>Copied!</p><br /></> : <>Click to copy<br />email address.</>}
             </p>
           </button>
         </div>

@@ -40,10 +40,8 @@ export default function Card({
                                 width={512}
                                 className="h-full object-contain"
                             />
-                            <h2 className='text-[1.5rem] bg-white'>{title}</h2>
-                            <div className='absolute top-[-2.25rem] right-0 h-9 w-9'>
-                                <div onClick={closeModal} className=' font-bold bg-black bg-opacity-50 text-4xl cursor-pointer text-white flex items-center justify-center h-full'>×</div>
-                            </div>
+                            <h2 className='text-[1.5rem] font-bold bg-white rounded-lg p-4 relative'>{title}</h2>
+                            <div onClick={closeModal} className=' absolute right-0 top-[-2.5rem] font-bold text-4xl cursor-pointer text-white'>×</div>
                         </div>
                     </div>
                 </div>
