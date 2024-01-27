@@ -1,15 +1,13 @@
 import { useState, useRef } from 'react';
+import data from '@/app/data';
 import Image from "next/image";
 
 export default function Card({
     id,
     title,
+    thumbnailSrc,
     imageSrc,
-}: {
-    id: string;
-    title: string;
-    imageSrc: string;
-}) {
+}: typeof data[0]) {
     const [isOpen, setIsOpen] = useState(false);
     const toggleModal = () => {
         setIsOpen(!isOpen);
@@ -23,9 +21,9 @@ export default function Card({
             <div onClick={toggleModal} className="cursor-pointer">
                 <Image
                     alt=""
-                    src={imageSrc}
-                    height={256}
-                    width={256}
+                    src={thumbnailSrc}
+                    height={512}
+                    width={512}
                     className="w-full object-cover mb-5"
                 />
             </div>

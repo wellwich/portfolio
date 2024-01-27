@@ -22,12 +22,15 @@ export default function Home() {
       console.error('Failed to copy text: ', err);
     }
   };
+  // dataを逆順にする。
+  const dataReverse = data.slice().reverse();
+
   return (
     <>
       <h2 className="text-4xl font-bold">WORKS</h2>
       <div className=" rounded bg-gray-100 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 auto-rows-max gap-6 lg:p-16 p-4">
-        {data.map(({ id, title, imageSrc }) => (
-          <Card key={id} id={id} title={title} imageSrc={imageSrc}></Card>
+        {dataReverse.map(({ id, title, thumbnailSrc, imageSrc }) => (
+          <Card key={id} id={id} title={title} thumbnailSrc={thumbnailSrc} imageSrc={imageSrc}></Card>
         ))}
       </div>
       <h2 className='text-4xl font-bold'>LINKS</h2>
