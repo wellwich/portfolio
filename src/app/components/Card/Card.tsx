@@ -28,16 +28,16 @@ export default function Card({
                 />
             </div>
             {isOpen && (
-                <div onClick={closeModal} className='bg-opacity-50 bg-black w-full h-full fixed top-0 left-0 flex items-center justify-center'>
-                    <div onClick={(e) => e.stopPropagation()} className='m-16 bg-gray-100 rounded-lg p-4 relative max-h-min'>
+                <div onClick={closeModal} className='bg-opacity-50 bg-black w-full h-full fixed top-0 left-0 grid items-center justify-center'>
+                    <div onClick={(e) => e.stopPropagation()} className='grid bg-gray-100 rounded-lg p-4 relative max-w-fit min-h-fit'>
                         <Image
                             alt=""
                             src={imageSrc}
                             height={512}
                             width={512}
-                            className="h-full object-contain"
+                            className="object-contain max-h-[75vh] max-w-[80vw]"
                         />
-                        <h2 className='text-[1.5rem] font-bold bg-white rounded-lg p-4 relative'>{title}</h2>
+                        <h2 className='text-[1.5rem] font-bold bg-white rounded-lg p-4'>{title}</h2>
                     </div>
                 </div>
             )}
