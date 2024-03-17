@@ -36,7 +36,7 @@ const links: Link[] = [
     {
         id: "5",
         title: "game",
-        url: "https://www.tumblr.com/wellwich0505",
+        url: "https://games.wellwich.com/",
         icon: faGamepad
     }
 ];
