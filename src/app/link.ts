@@ -1,4 +1,5 @@
 import { IconDefinition, faPixiv, faXTwitter, faDeviantart, faTumblr } from "@fortawesome/free-brands-svg-icons";
+import { faGamepad } from "@fortawesome/free-solid-svg-icons";
 
 export type Link = {
     id: string;
@@ -32,6 +33,12 @@ const links: Link[] = [
         url: "https://www.tumblr.com/wellwich0505",
         icon: faTumblr
     },
+    {
+        id: "5",
+        title: "game",
+        url: "https://www.tumblr.com/wellwich0505",
+        icon: faGamepad
+    }
 ];
 
 export default links;
